@@ -92,7 +92,7 @@ function drawExpressions(detections, x, y, textYSpace){
 
     push();
       translate(100,300)
-      rotate(sin(frameCount/20))
+      rotate(sin(frameCount/100))
       fill(neutral*200,255,100)
       anim_ellipses(75)
 	  pop();
@@ -311,33 +311,32 @@ function drawExpressions(detections, x, y, textYSpace){
 // }
 
 function anim_ellipses(반지름) {
-  let r = sin(frameCount/5)*20
+  let r = sin(frameCount/30)*20
   push()
   noStroke()
   // fill("#2ec4b6")
+    push()
+    translate(-반지름/2, -반지름/2)
+    rotate(-45)
+    ellipse(0, 0, 반지름/2 + r, 반지름 - Math.abs(r) )
+    pop()
 
-  push()
-  translate(-반지름/2, -반지름/2)
-  rotate(-45)
-  ellipse(0, 0, 반지름/2 + r, 반지름 - Math.abs(r) )
-  pop()
+    push()
+    translate(반지름/2, -반지름/2)
+    rotate(45)
+    ellipse(0, 0, 반지름/2 + r, 반지름 - Math.abs(r) )
+    pop()
 
-  push()
-  translate(반지름/2, -반지름/2)
-  rotate(45)
-  ellipse(0, 0, 반지름/2 + r, 반지름 - Math.abs(r) )
-  pop()
+    push()
+    translate(-반지름/2, 반지름/2)
+    rotate(45)
+    ellipse(0, 0, 반지름/2 + r, 반지름 - Math.abs(r) )
+    pop()
 
-  push()
-  translate(-반지름/2, 반지름/2)
-  rotate(45)
-  ellipse(0, 0, 반지름/2 + r, 반지름 - Math.abs(r) )
+    push()
+    translate(반지름/2, 반지름/2)
+    rotate(-45)
+    ellipse(0, 0, 반지름/2 + r, 반지름 - Math.abs(r) )
+    pop()
   pop()
-
-  push()
-  translate(반지름/2, 반지름/2)
-  rotate(-45)
-  ellipse(0, 0, 반지름/2 + r, 반지름 - Math.abs(r) )
-  pop()
-pop()
 }
