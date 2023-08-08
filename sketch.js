@@ -349,12 +349,12 @@ function drawExpressions(detections, x, y, textYSpace){
     push();
     textSize(15);
     noStroke();
-    fill(255, 169, 225);
-    text("neutral:      "+"0.%", x+textYSpace*5, textYSpace*5);
-    text("happiness:  "+"0.%", x+textYSpace*5, textYSpace*6);
-    text("anger:       "+"0.%", x+textYSpace*5, textYSpace*7);
-    text("sad:          "+"0.%", x+textYSpace*5, textYSpace*8);
-    text("surprised:   "+"0.%",  x+textYSpace*5, textYSpace*9);
+    fill(245,184,65);
+    text("neutral:      "+"0.%", x+textYSpace*2, textYSpace*2);
+    text("happiness:  "+"0.%", x+textYSpace*2, textYSpace*3);
+    text("anger:       "+"0.%", x+textYSpace*2, textYSpace*4);
+    text("sad:          "+"0.%", x+textYSpace*2, textYSpace*5);
+    text("surprised:   "+"0.%",  x+textYSpace*2, textYSpace*6);
     pop();
   }
 }
