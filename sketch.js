@@ -73,6 +73,9 @@ function drawLandmarks(detections){
     }
   }
 }
+function draw (){
+
+}
 
 function drawExpressions(detections, x, y, textYSpace){
   if(detections.length > 0){//If at least 1 face is detected
