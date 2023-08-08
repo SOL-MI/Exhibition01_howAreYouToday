@@ -118,53 +118,134 @@ function drawExpressions(detections, x, y, textYSpace){
     push();
     noStroke();
     fill(100,100,100);
-    rect(0,0,windowWidth/8,windowWidth/8);
+    rect(0,0,windowWidth/7,windowWidth/7);
     pop();
 
     push();
     noStroke();
     fill(255,100,100);
-    rect(windowWidth/8,0,windowWidth/8,windowWidth/8);
+    rect(windowWidth/7*1,0,windowWidth/7,windowWidth/7);
     pop();
 
     push();
     noStroke();
     fill(100,100,100);
-    rect(windowWidth/4,0,windowWidth/8,windowWidth/8);
+    rect(windowWidth/7*2,0,windowWidth/7,windowWidth/7);
     pop();
 
     push();
     noStroke();
     fill(255,100,100);
-    rect(windowWidth/8*3,0,windowWidth/8,windowWidth/8);
+    rect(windowWidth/7*3,0,windowWidth/7,windowWidth/7);
+    pop();
+
+    push();
+    noStroke();
+    fill(255,100,100);
+    rect(windowWidth/7*4,0,windowWidth/7,windowWidth/7);
     pop();
 
     push();
     noStroke();
     fill(100,100,100);
-    rect(windowWidth/2,0,windowWidth/8,windowWidth/8);
+    rect(windowWidth/7*5,0,windowWidth/7,windowWidth/7);
     pop();
 
     push();
     noStroke();
     fill(255,100,100);
-    rect(windowWidth/8*5,0,windowWidth/8,windowWidth/8);
-    pop();
-
-    push();
-    noStroke();
-    fill(100,100,100);
-    rect(windowWidth/4*3,0,windowWidth/8,windowWidth/8);
-    pop();
-
-    push();
-    noStroke();
-    fill(255,100,100);
-    rect(windowWidth/8*7,0,windowWidth/8,windowWidth/8);
+    rect(windowWidth/7*6,0,windowWidth/7,windowWidth/7);
     pop();
 
     //2번째줄
+    push();
+    noStroke();
+    fill(100,255,100);
+    rect(0,windowWidth/7,windowWidth/7,windowWidth/7);
+    pop();
 
+    push();
+    noStroke();
+    fill(255,255,100);
+    rect(windowWidth/7*1,windowWidth/7,windowWidth/7,windowWidth/7);
+    pop();
+
+    push();
+    noStroke();
+    fill(100,255,100);
+    rect(windowWidth/7*2,windowWidth/7,windowWidth/7,windowWidth/7);
+    pop();
+
+    push();
+    noStroke();
+    fill(255,255,100);
+    rect(windowWidth/7*3,windowWidth/7,windowWidth/7,windowWidth/7);
+    pop();
+
+    push();
+    noStroke();
+    fill(255,100,100);
+    rect(windowWidth/7*4,windowWidth/7,windowWidth/7,windowWidth/7);
+    pop();
+
+    push();
+    noStroke();
+    fill(100,255,100);
+    rect(windowWidth/7*5,windowWidth/7,windowWidth/7,windowWidth/7);
+    pop();
+
+    push();
+    noStroke();
+    fill(255,255,100);
+    rect(windowWidth/7*6,windowWidth/7,windowWidth/7,windowWidth/7);
+    pop();
+
+    //3번째 줄
+    push();
+    noStroke();
+    fill(100,100,100);
+    rect(0,windowWidth/7*2,windowWidth/7,windowWidth/7);
+    pop();
+
+    push();
+    noStroke();
+    fill(255,100,100);
+    rect(windowWidth/7*1,windowWidth/7*2,windowWidth/7,windowWidth/7);
+    pop();
+
+    push();
+    noStroke();
+    fill(100,100,100);
+    rect(windowWidth/7*2,windowWidth/7*2,windowWidth/7,windowWidth/7);
+    pop();
+
+    push();
+    noStroke();
+    fill(255,100,100);
+    rect(windowWidth/7*3,windowWidth/7*2,windowWidth/7,windowWidth/7);
+    pop();
+
+    push();
+    noStroke();
+    fill(255,100,100);
+    rect(windowWidth/7*4,windowWidth/7*2,windowWidth/7,windowWidth/7);
+    pop();
+
+    push();
+    noStroke();
+    fill(100,100,100);
+    rect(windowWidth/7*5,windowWidth/7*2,windowWidth/7,windowWidth/7);
+    pop();
+
+    push();
+    noStroke();
+    fill(255,100,100);
+    rect(windowWidth/7*6,windowWidth/7*2,windowWidth/7,windowWidth/7);
+    pop();
+
+
+
+    
     push();
     fill(255,0,0);
     noStroke();
