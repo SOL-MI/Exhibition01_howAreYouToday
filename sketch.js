@@ -10,7 +10,7 @@ function setup() {
 
   video = createCapture(VIDEO);// Create the video
   video.id("video");
-  video.size(width, height);
+  video.size(windowWidth, windowHeight);
   video.hide(); //비디오 숨기기
 
   const faceOptions = {
@@ -23,6 +23,7 @@ function setup() {
   //Initialize the model
   faceapi = ml5.faceApi(video, faceOptions, faceReady);
 
+  angleMode(DEGREES);
 }
 
 function faceReady() {
@@ -110,176 +111,243 @@ function drawExpressions(detections, x, y, textYSpace){
     textSize(14);
     noStroke();
     fill(255, 169, 225);
-    text("neutral:      " + nf(neutral*100,0, 0)+"%", x+textYSpace*5, textYSpace*5);
-    text("happiness:  " + nf(happy*100,0, 0)+"%", x+textYSpace*5, textYSpace*6);
-    text("anger:       " + nf(angry*100,0, 0)+"%", x+textYSpace*5, textYSpace*7);
-    text("sad:          "+ nf(sad*100,0, 0)+"%", x+textYSpace*5, textYSpace*8);
-    text("surprised:   " + nf(surprised*100,0, 0)+"%",  x+textYSpace*5, textYSpace*9);
+    text("neutral:      " + nf(neutral*100,0, 0)+"%", x+textYSpace*4, textYSpace*5);
+    text("happiness:  " + nf(happy*100,0, 0)+"%", x+textYSpace*4, textYSpace*6);
+    text("anger:       " + nf(angry*100,0, 0)+"%", x+textYSpace*4, textYSpace*7);
+    text("sad:          "+ nf(sad*100,0, 0)+"%", x+textYSpace*4, textYSpace*8);
+    text("surprised:   " + nf(surprised*100,0, 0)+"%",  x+textYSpace*4, textYSpace*9);
     pop();
   }else{
     //1번째 줄
+    const unit = windowWidth/6
+    //1-1
     push();
     noStroke();
+    fill(30,30,30);
+    rect(0,0,unit,unit);
     fill(100,100,100);
-    rect(0,0,windowWidth/6,windowWidth/6);
+    arc(unit/2,unit,unit,unit,180,0)
     pop();
-
+    //1-2
     push();
     noStroke();
-    fill(255,100,100);
-    rect(windowWidth/6*1,0,windowWidth/6,windowWidth/6);
+    translate(unit,0)
+    fill(200,200,200);
+    rect(0,0,unit,unit);
     pop();
-
+    //1-3
     push();
     noStroke();
+    translate(unit*2,0);
     fill(100,100,100);
-    rect(windowWidth/6*2,0,windowWidth/6,windowWidth/6);
+    rect(0,0,unit,unit);
+    fill(150,150,130);
+    arc(0,unit,unit*2,unit*2,270,0);
     pop();
-
+    //1-4
     push();
     noStroke();
-    fill(255,100,100);
-    rect(windowWidth/6*3,0,windowWidth/6,windowWidth/6);
+    translate(unit*3,0);
+    fill(150,150,150);
+    rect(0,0,unit,unit);
+    fill(30,30,30);
+    arc(unit,unit/2,unit,unit,90,270);
     pop();
-
+    //1-5
     push();
     noStroke();
-    fill(255,100,100);
-    rect(windowWidth/6*4,0,windowWidth/6,windowWidth/6);
-    pop();
-
-    push();
-    noStroke();
+    translate(unit*4,0);
     fill(100,100,100);
-    rect(windowWidth/6*5,0,windowWidth/6,windowWidth/6);
+    rect(0,0,unit,unit);
+    pop();
+    //1-6
+    push();
+    noStroke();
+    translate(unit*5,0);
+    fill(200,200,200);
+    rect(0,0,unit,unit);
+    fill(150,150,130);
+    arc(unit,0,unit*2,unit*2,90,180);
     pop();
 
 
     //2번째줄
     push();
-    noStroke();
-    fill(100,255,100);
-    rect(0,windowWidth/6,windowWidth/6,windowWidth/6);
+    translate(0,unit);
+      //2-1
+      push();
+      noStroke();
+      fill(150,150,130);
+      rect(0,0,unit,unit);
+      fill(50,50,50);
+      arc(unit,unit/2,unit,unit,90,270);
+      pop();
+      //2-2
+      push();
+      noStroke();
+      translate(unit,0);
+      fill(100,100,100);
+      rect(0,0,unit,unit);
+        push();
+        fill(150,150,150);
+        for(let i=0; i<unit; i+=10){
+          rect(i,0,2,unit-i)
+        }
+        pop();
+      pop();
+      //2-3
+      push();
+      noStroke();
+      translate(unit*2,0);
+      fill(50,50,50);
+      rect(0,0,unit,unit);
+      fill(150,150,150);
+      arc(unit,unit/2,unit,unit,90,270);
+      pop();
+      //2-4
+      push();
+      noStroke();
+      translate(unit*3,0);
+      fill(150,150,130);
+      rect(0,0,unit,unit);
+      fill(50,50,50);
+      arc(0,unit/2,unit,unit,270,90);
+      pop();
+      //2-5
+      push();
+      noStroke();
+      translate(unit*4,0);
+      fill(30,30,30);
+      rect(0,0,unit,unit);
+      fill(100,100,100);
+      arc(unit/2,unit,unit,unit,180,0)
+      pop();
+      //2-6
+      push();
+      noStroke();
+      translate(unit*5,0);
+      fill(150,150,130);
+      rect(0,0,unit,unit);
+      pop();
     pop();
-
-    push();
-    noStroke();
-    fill(255,255,100);
-    rect(windowWidth/6*1,windowWidth/6,windowWidth/6,windowWidth/6);
-    pop();
-
-    push();
-    noStroke();
-    fill(100,255,100);
-    rect(windowWidth/6*2,windowWidth/6,windowWidth/6,windowWidth/6);
-    pop();
-
-    push();
-    noStroke();
-    fill(255,255,100);
-    rect(windowWidth/6*3,windowWidth/6,windowWidth/6,windowWidth/6);
-    pop();
-
-    push();
-    noStroke();
-    fill(255,100,100);
-    rect(windowWidth/6*4,windowWidth/6,windowWidth/6,windowWidth/6);
-    pop();
-
-    push();
-    noStroke();
-    fill(100,255,100);
-    rect(windowWidth/6*5,windowWidth/6,windowWidth/6,windowWidth/6);
-    pop();
-
 
     //3번째 줄
     push();
-    noStroke();
-    fill(100,100,100);
-    rect(0,windowWidth/6*2,windowWidth/6,windowWidth/6);
-    pop();
-
-    push();
-    noStroke();
-    fill(255,100,100);
-    rect(windowWidth/6*1,windowWidth/6*2,windowWidth/6,windowWidth/6);
-    pop();
-
-    push();
-    noStroke();
-    fill(100,100,100);
-    rect(windowWidth/6*2,windowWidth/6*2,windowWidth/6,windowWidth/6);
-    pop();
-
-    push();
-    noStroke();
-    fill(255,100,100);
-    rect(windowWidth/6*3,windowWidth/6*2,windowWidth/6,windowWidth/6);
-    pop();
-
-    push();
-    noStroke();
-    fill(255,100,100);
-    rect(windowWidth/6*4,windowWidth/6*2,windowWidth/6,windowWidth/6);
-    pop();
-
-    push();
-    noStroke();
-    fill(100,100,100);
-    rect(windowWidth/6*5,windowWidth/6*2,windowWidth/6,windowWidth/6);
+    translate(0,unit*2);
+      //3-1
+      push();
+      noStroke();
+      fill(100,100,100);
+      rect(0,0,unit,unit);
+      pop();
+      //3-2
+      push();
+      noStroke();
+      translate(unit,0);
+      fill(50,50,50);
+      rect(0,0,unit,unit);
+      fill(200,200,200);
+      ellipse(unit/2,unit/2,unit);
+      pop();
+      //3-3
+      push();
+      noStroke();
+      translate(unit*2,0);
+      fill(100,100,100);
+      rect(0,0,unit,unit);
+      pop();
+      //3-4
+      push();
+      noStroke();
+      translate(unit*3,0);
+      fill(200,200,200);
+      rect(0,0,unit,unit);
+      fill(70,70,70);
+      arc(unit,unit,unit*2,unit*2,180,270);
+      pop();
+      //3-5
+      push();
+      noStroke();
+      translate(unit*4,0);
+      fill(200,200,200);
+      rect(0,0,unit,unit);
+      fill(150,150,130);
+      arc(unit/2,unit,unit,unit,180,0);
+      pop();
+      //3-6
+      push();
+      noStroke();
+      translate(unit*5,0);
+      fill(100,100,100);
+      rect(0,0,unit,unit);
+      fill(30,30,30);
+      arc(0,0,unit,unit,0,90);
+      arc(0,unit,unit,unit,270,0);
+      arc(unit,0,unit,unit,90,180);
+      arc(unit,unit,unit,unit,180,270);
+      pop();
     pop();
 
     //4번째줄
     push();
-    noStroke();
-    fill(100,255,100);
-    rect(0,windowWidth/2,windowWidth/6,windowWidth/6);
+    translate(0,unit*3);
+      //4-1
+      push();
+      noStroke();
+      fill(30,30,30);
+      rect(0,0,unit,unit);
+      fill(150,150,130);
+      arc(0,unit/2,unit,unit,270,90);
+      pop();
+      //4-2
+      push();
+      noStroke();
+      translate(unit,0);
+      fill(150,150,150);
+      rect(0,0,unit,unit);
+      pop();
+      //4-3
+      push();
+      noStroke();
+      translate(unit*2,0);
+      fill(200,200,200);
+      rect(0,0,unit,unit);
+      fill(150,150,130);
+      arc(unit/2,unit,unit,unit,180,0)
+      pop();
+      //4-4
+      push();
+      noStroke();
+      translate(unit*3,0);
+      fill(30,30,30);
+      rect(0,0,unit,unit);
+      push();
+      fill(150,150,150);
+      for(let i=0; i<unit; i+=10){
+        rect(i,0,2,i)
+      }
+      pop();
+      pop();
+      //4-5
+      push();
+      noStroke();
+      translate(unit*4,0);
+      fill(150,150,150);
+      rect(0,0,unit,unit);
+      fill(50,50,50);
+      arc(unit/2,0,unit,unit,0,180);
+      pop();
+      //4-6
+      push();
+      noStroke();
+      translate(unit*5,0);
+      fill(100,100,100);
+      rect(0,0,unit,unit);
+      pop();
     pop();
 
     push();
-    noStroke();
-    fill(255,255,100);
-    rect(windowWidth/6*1,windowWidth/2,windowWidth/6,windowWidth/6);
-    pop();
-
-    push();
-    noStroke();
-    fill(100,255,100);
-    rect(windowWidth/6*2,windowWidth/2,windowWidth/6,windowWidth/6);
-    pop();
-
-    push();
-    noStroke();
-    fill(255,255,100);
-    rect(windowWidth/6*3,windowWidth/2,windowWidth/6,windowWidth/6);
-    pop();
-
-    push();
-    noStroke();
-    fill(255,100,100);
-    rect(windowWidth/6*4,windowWidth/2,windowWidth/6,windowWidth/6);
-    pop();
-
-    push();
-    noStroke();
-    fill(100,255,100);
-    rect(windowWidth/6*5,windowWidth/2,windowWidth/6,windowWidth/6);
-    pop();
-
-
-
-    
-    push();
-    fill(255,0,0);
-    noStroke();
-    for(let i=0; i<10; i++){
-      rect(i*10,0,5,100-i*i*2)
-    }
-    pop();
-
-    push();
-    textSize(14);
+    textSize(15);
     noStroke();
     fill(255, 169, 225);
     text("neutral:      "+"0.%", x+textYSpace*5, textYSpace*5);
@@ -291,24 +359,6 @@ function drawExpressions(detections, x, y, textYSpace){
   }
 }
 
-//잉여 코드. 어느 정도 작업 진행되면 지워도됨.
-// function draw(){
-  // clear();//Draw transparent background
-  // image(video, 0, 0, width, height);
-// }
-
-//A라는 함수 만들어서 여기다가 그림 그리고 똑같이 dectections인수로 받아서 감정 값 가져올랬는데 잘안됨.
-// function A(detections){
-//   fill(0, 169, 225);
-//   rect(100,100,100,200);
-//   if(detections.length > 0){
-//     let {neutral1, happy1, angry1, sad1, surprised1} = detections[0].expressions;
-//     console.log(neutral1)
-//     if(neutral1>50){
-//       rect(300,200,50,50);
-//     }
-//   }
-// }
 
 function anim_ellipses(반지름) {
   let r = sin(frameCount/30)*20
