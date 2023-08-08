@@ -83,7 +83,7 @@ function drawExpressions(detections, x, y, textYSpace){
     //let {neutral, happy, angry, sad, disgusted, surprised, fearful} = detections[0].expressions; <-기존코드.
     //console.log(detections[0].expressions.neutral) <- 값 제대로 나오나 테스트용
     let {neutral, happy, angry, sad, surprised} = detections[0].expressions;
-    
+        
     push();
       fill(neutral*200,255,100);
       noStroke();
@@ -92,9 +92,10 @@ function drawExpressions(detections, x, y, textYSpace){
     pop();
 
     push();
-      translate(100,300)
-      rotate(sin(frameCount/100))
-      fill(neutral*200,255,100)
+    console.log(frameCount)
+      translate(100,300);
+      rotate(sin(frameCount));
+      fill(neutral*200,255,100);
       anim_ellipses(75)
 	  pop();
 
@@ -111,27 +112,27 @@ function drawExpressions(detections, x, y, textYSpace){
     textSize(14);
     noStroke();
     fill(255, 169, 225);
-    text("neutral:      " + nf(neutral*100,0, 0)+"%", x+textYSpace*4, textYSpace*5);
-    text("happiness:  " + nf(happy*100,0, 0)+"%", x+textYSpace*4, textYSpace*6);
-    text("anger:       " + nf(angry*100,0, 0)+"%", x+textYSpace*4, textYSpace*7);
-    text("sad:          "+ nf(sad*100,0, 0)+"%", x+textYSpace*4, textYSpace*8);
-    text("surprised:   " + nf(surprised*100,0, 0)+"%",  x+textYSpace*4, textYSpace*9);
+    text("neutral:      " + nf(neutral*100,0, 0)+"%", x+textYSpace*2, textYSpace*2);
+    text("happiness:  " + nf(happy*100,0, 0)+"%", x+textYSpace*2, textYSpace*3);
+    text("anger:       " + nf(angry*100,0, 0)+"%", x+textYSpace*2, textYSpace*4);
+    text("sad:          "+ nf(sad*100,0, 0)+"%", x+textYSpace*2, textYSpace*5);
+    text("surprised:   " + nf(surprised*100,0, 0)+"%",  x+textYSpace*2, textYSpace*6);
     pop();
   }else{
     //1번째 줄
-    const unit = windowWidth/6
+    const unit = windowWidth/6;
     //1-1
     push();
     noStroke();
     fill(30,30,30);
     rect(0,0,unit,unit);
     fill(100,100,100);
-    arc(unit/2,unit,unit,unit,180,0)
+    arc(unit/2,unit,unit,unit,180,0);
     pop();
     //1-2
     push();
     noStroke();
-    translate(unit,0)
+    translate(unit,0);
     fill(200,200,200);
     rect(0,0,unit,unit);
     pop();
@@ -361,7 +362,7 @@ function drawExpressions(detections, x, y, textYSpace){
 
 
 function anim_ellipses(반지름) {
-  let r = sin(frameCount/30)*20
+  let r = sin(frameCount)*20
   push()
   noStroke()
   // fill("#2ec4b6")
