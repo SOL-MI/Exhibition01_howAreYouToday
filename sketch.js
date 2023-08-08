@@ -227,6 +227,43 @@ function drawExpressions(detections, x, y, textYSpace){
     rect(windowWidth/6*5,windowWidth/6*2,windowWidth/6,windowWidth/6);
     pop();
 
+    //4번째줄
+    push();
+    noStroke();
+    fill(100,255,100);
+    rect(0,windowWidth/2,windowWidth/6,windowWidth/6);
+    pop();
+
+    push();
+    noStroke();
+    fill(255,255,100);
+    rect(windowWidth/6*1,windowWidth/2,windowWidth/6,windowWidth/6);
+    pop();
+
+    push();
+    noStroke();
+    fill(100,255,100);
+    rect(windowWidth/6*2,windowWidth/2,windowWidth/6,windowWidth/6);
+    pop();
+
+    push();
+    noStroke();
+    fill(255,255,100);
+    rect(windowWidth/6*3,windowWidth/2,windowWidth/6,windowWidth/6);
+    pop();
+
+    push();
+    noStroke();
+    fill(255,100,100);
+    rect(windowWidth/6*4,windowWidth/2,windowWidth/6,windowWidth/6);
+    pop();
+
+    push();
+    noStroke();
+    fill(100,255,100);
+    rect(windowWidth/6*5,windowWidth/2,windowWidth/6,windowWidth/6);
+    pop();
+
 
 
     
