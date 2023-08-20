@@ -132,7 +132,7 @@ function drawExpressions(detections, x, y, textYSpace){
 }
 function noInteractionDisplay(){
       //1번째 줄
-      const unit = windowWidth/6;
+      const unit = windowWidth/7;
       //1-1
       push();
       noStroke();
@@ -362,7 +362,7 @@ function noInteractionDisplay(){
 
 function InteractionDisplay(neutral, happy, angry, sad, surprised){
   //1번째 줄
-  const unit = windowWidth/6;
+  const unit = windowWidth/7;
 
   let happyOpacity = map(happy,0,1,0.9,1);
   let angryOpacity = map(angry,0,1,0.8,1);
@@ -920,7 +920,7 @@ function anim_ellipses(반지름) {
 }
 
 function surprisedColor (surprised){
-  const unit = windowWidth/6;
+  const unit = windowWidth/7;
   const suprisedForColor = map(surprised, 0, windowWidth, 150,255);
   if(surprised>20){
     push();
@@ -1147,7 +1147,7 @@ function surprisedColor (surprised){
 }
 
 function basicbg(){
-  const unit = windowWidth/6;
+  const unit = windowWidth/7;
    //1-1
    push();
    noStroke();
@@ -1375,7 +1375,7 @@ function basicbg(){
 }
 
 function sadColorBg (sad) {
-  const unit = windowWidth/6;
+  const unit = windowWidth/7;
   //1-1
   push();
   noStroke();
