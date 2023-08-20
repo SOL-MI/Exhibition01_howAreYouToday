@@ -138,7 +138,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
   let angryOpacity = map(angry,0,1,0.8,1);
   const happyOffset = 0.8;
   const angryOffset = 0.35;
-  const sadOffset = 0.4;
+  const sadOffset = 0.3;
   const surprisedOffset1 = 0.997;
   // const surprisedOffset2 = 0.2;
   let sadColorFrameCount = cos(frameCount/5)*2.4;
@@ -160,7 +160,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
     fill(233,255,255,happyOpacity*255);
   }else if(angry>angryOffset){
     fill(255,100,50,angryOpacity*255);
-  }else if(sad>sadOffset&&(2.4>=sadColorFrameCount&&sadColorFrameCount>2.2)){
+  }else if(sad>sadOffset&&(2.4>=sadColorFrameCount&&sadColorFrameCount>2.3)){
     fill(11,57,72);
   }
   rect(0,0,unit,unit);
@@ -169,7 +169,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
     fill(255,86,102,happyOpacity*255);
   }else if(angry>angryOffset){
     fill(200,50,100,angryOpacity*255);
-  }else if(sad>sadOffset&&(2.4>=sadColorFrameCount&&sadColorFrameCount>2.2)){
+  }else if(sad>sadOffset&&(2.4>=sadColorFrameCount&&sadColorFrameCount>2.3)){
     fill(89,145,201);
   }
   arc(unit/2,unit,unit,unit,180,0);
@@ -182,7 +182,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
     fill(143,235,150,happyOpacity*255);
   }else if(angry>angryOffset){
     fill(253,16,35,angryOpacity*255);
-  }else if(sad>sadOffset&&(1.6>=sadColorFrameCount&&sadColorFrameCount>1.4)){
+  }else if(sad>sadOffset&&(1.72>=sadColorFrameCount&&sadColorFrameCount>1.55)){
     fill(11,57,72);
   }
   rect(0,0,unit,unit);
@@ -195,7 +195,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
     fill(255,86,102,happyOpacity*255);
   }else if(angry>angryOffset){
     fill(200,50,100,angryOpacity*255);
-  }else if(sad>sadOffset&&((0.8>=sadColorFrameCount&&sadColorFrameCount>0.6))){
+  }else if(sad>sadOffset&&((1.04>=sadColorFrameCount&&sadColorFrameCount>0.87))){
     fill(89,145,201);
   }
   rect(0,0,unit,unit);
@@ -203,7 +203,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
     fill(255,236,0,happyOpacity*255);
   }else if(angry>angryOffset){
     fill(255,100,50,angryOpacity*255);
-  }else if(sad>sadOffset&&((0.8>=sadColorFrameCount&&sadColorFrameCount>0.6))){
+  }else if(sad>sadOffset&&((1.04>=sadColorFrameCount&&sadColorFrameCount>0.87))){
     fill(142,185,255);
   }
   arc(0,unit,unit*2,unit*2,270,0);
@@ -216,7 +216,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
     fill(233,255,255,happyOpacity*255);
   }else if(angry>angryOffset){
     fill(248,152,224,angryOpacity*255);
-  }else if(sad>sadOffset&&((0>=sadColorFrameCount&&sadColorFrameCount>-0.2))){
+  }else if(sad>sadOffset&&((0.36>=sadColorFrameCount&&sadColorFrameCount>0.19))){
     fill(142,185,255);
   }
   rect(0,0,unit,unit);
@@ -224,7 +224,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
     fill(0,221,75,happyOpacity*255);
   }else if(angry>angryOffset){
     fill(255,100,50,angryOpacity*255);
-  }else if(sad>sadOffset&&((0>=sadColorFrameCount&&sadColorFrameCount>-0.2))){
+  }else if(sad>sadOffset&&((0.36>=sadColorFrameCount&&sadColorFrameCount>0.19))){
     fill(11,57,72);
   }
   arc(unit,unit/2,unit,unit,90,270);
@@ -237,7 +237,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
     fill(255,236,0,happyOpacity*255);
   }else if(angry>angryOffset){
     fill(200,50,100,angryOpacity*255);
-  }else if(sad>sadOffset&&((-0.8>=sadColorFrameCount&&sadColorFrameCount>-1.0))){
+  }else if(sad>sadOffset&&((-0.32>=sadColorFrameCount&&sadColorFrameCount>-0.49))){
     fill(89,145,201);
   }
   rect(0,0,unit,unit);
@@ -250,7 +250,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
     fill(233,255,255,happyOpacity*255);
   }else if(angry>angryOffset){
     fill(253,16,35,angryOpacity*255);
-  }else if(sad>sadOffset&&((-1.6>=sadColorFrameCount&&sadColorFrameCount>-1.8))){
+  }else if(sad>sadOffset&&((-1.0>=sadColorFrameCount&&sadColorFrameCount>-1.17))){
     fill(89,145,201);
   }
   rect(0,0,unit,unit);
@@ -258,7 +258,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
     fill(255,86,102,happyOpacity*255);
   }else if(angry>angryOffset){
     fill(248,152,224,angryOpacity*255);
-  }else if(sad>sadOffset&&((-1.6>=sadColorFrameCount&&sadColorFrameCount>-1.8))){
+  }else if(sad>sadOffset&&((-1.0>=sadColorFrameCount&&sadColorFrameCount>-1.17))){
     fill(142,185,255);
   }
   arc(unit,0,unit*2,unit*2,90,180);
@@ -271,7 +271,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
     fill(233,255,255,happyOpacity*255);
   }else if(angry>angryOffset){
     fill(255,100,50,angryOpacity*255);
-  }else if(sad>sadOffset&&(2.4>=sadColorFrameCount&&sadColorFrameCount>2.2)){
+  }else if(sad>sadOffset&&(-1.70>=sadColorFrameCount&&sadColorFrameCount>-1.9)){
     fill(11,57,72);
   }
   rect(0,0,unit,unit);
@@ -280,7 +280,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
     fill(0,221,75,happyOpacity*255);
   }else if(angry>angryOffset){
     fill(200,50,100,angryOpacity*255);
-  }else if(sad>sadOffset&&(2.4>=sadColorFrameCount&&sadColorFrameCount>2.2)){
+  }else if(sad>sadOffset&&(-1.70>=sadColorFrameCount&&sadColorFrameCount>-1.9)){
     fill(89,145,201);
   }
   arc(unit/2,unit,unit,unit,180,0);
@@ -298,7 +298,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
       fill(255,236,0,happyOpacity*255);
     }else if(angry>angryOffset){
       fill(253,16,35,angryOpacity*255);
-    }else if(sad>sadOffset&&(2.2>=sadColorFrameCount&&sadColorFrameCount>2.0)){
+    }else if(sad>sadOffset&&(2.3>=sadColorFrameCount&&sadColorFrameCount>2.1)){
       fill(112,105,150);
     }
     rect(0,0,unit,unit);
@@ -307,7 +307,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
       fill(143,235,150,happyOpacity*255);
     }else if(angry>angryOffset){
       fill(248,152,224,angryOpacity*255);
-    }else if(sad>sadOffset&&(2.2>=sadColorFrameCount&&sadColorFrameCount>2.0)){
+    }else if(sad>sadOffset&&(2.3>=sadColorFrameCount&&sadColorFrameCount>2.1)){
       fill(142,185,255);
     }
     arc(unit,unit/2,unit,unit,90,270);
@@ -321,7 +321,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
       fill(42,229,208,happyOpacity*255);
     }else if(angry>angryOffset){
       fill(200,50,100,angryOpacity*255);
-    }else if(sad>sadOffset&&(1.4>=sadColorFrameCount&&sadColorFrameCount>1.2)){
+    }else if(sad>sadOffset&&(1.55>=sadColorFrameCount&&sadColorFrameCount>1.38)){
       fill(89,145,201);
     }
     rect(0,0,unit,unit);
@@ -331,7 +331,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
         fill(233,255,255,happyOpacity*255);
       }else if(angry>angryOffset){
         fill(255,150,100,angryOpacity*255);
-      }else if(sad>sadOffset&&(1.4>=sadColorFrameCount&&sadColorFrameCount>1.2)){
+      }else if(sad>sadOffset&&(1.55>=sadColorFrameCount&&sadColorFrameCount>1.38)){
       fill(112,105,150);
       }
       for(let i=0; i<unit; i+=10){
@@ -348,7 +348,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
       fill(233,255,255,happyOpacity*255);
     }else if(angry>angryOffset){
       fill(248,152,224,angryOpacity*255);
-    }else if(sad>sadOffset&&((0.6>=sadColorFrameCount&&sadColorFrameCount>0.4))){
+    }else if(sad>sadOffset&&((0.87>=sadColorFrameCount&&sadColorFrameCount>0.7))){
       fill(112,105,150);
     }
     rect(0,0,unit,unit);
@@ -357,7 +357,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
       fill(255,86,102,happyOpacity*255);
     }else if(angry>angryOffset){
       fill(253,50,35,angryOpacity*255);
-    }else if(sad>sadOffset&&((0.6>=sadColorFrameCount&&sadColorFrameCount>0.4))){
+    }else if(sad>sadOffset&&((0.87>=sadColorFrameCount&&sadColorFrameCount>0.7))){
       fill(89,145,201);
     }
     arc(unit,unit/2,unit,unit,90,270);
@@ -371,7 +371,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
       fill(42,229,208,happyOpacity*255);
     }else if(angry>angryOffset){
       fill(253,16,35,angryOpacity*255);
-    }else if(sad>sadOffset&&((-0.2>=sadColorFrameCount&&sadColorFrameCount>-0.4))){
+    }else if(sad>sadOffset&&((0.19>=sadColorFrameCount&&sadColorFrameCount>0.02))){
       fill(11,57,72);
     }
     rect(0,0,unit,unit);
@@ -380,7 +380,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
       fill(255,236,0,happyOpacity*255);
     }else if(angry>angryOffset){
       fill(255,100,50,angryOpacity*255);
-    }else if(sad>sadOffset&&((-0.2>=sadColorFrameCount&&sadColorFrameCount>-0.4))){
+    }else if(sad>sadOffset&&((0.19>=sadColorFrameCount&&sadColorFrameCount>0.02))){
       fill(89,145,201);
     }
     arc(0,unit/2,unit,unit,270,90);
@@ -394,7 +394,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
       fill(255,86,102,happyOpacity*255);
     }else if(angry>angryOffset){
       fill(255,100,50,angryOpacity*255);
-    }else if(sad>sadOffset&&((-1.0>=sadColorFrameCount&&sadColorFrameCount>-1.2))){
+    }else if(sad>sadOffset&&((-0.49>=sadColorFrameCount&&sadColorFrameCount>-0.66))){
       fill(142,185,255);
     }
     rect(0,0,unit,unit);
@@ -403,7 +403,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
       fill(233,255,255,happyOpacity*255);
     }else if(angry>angryOffset){
       fill(248,152,224,angryOpacity*255);
-    }else if(sad>sadOffset&&((-1.0>=sadColorFrameCount&&sadColorFrameCount>-1.2))){
+    }else if(sad>sadOffset&&((-0.49>=sadColorFrameCount&&sadColorFrameCount>-0.66))){
       fill(112,105,150);
     }
     arc(unit/2,unit,unit,unit,180,0)
@@ -417,7 +417,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
       fill(143,235,150,happyOpacity*255);
     }else if(angry>angryOffset){
       fill(200,50,100,angryOpacity*255);
-    }else if(sad>sadOffset&&((-1.8>=sadColorFrameCount&&sadColorFrameCount>-2.0))){
+    }else if(sad>sadOffset&&((-1.17>=sadColorFrameCount&&sadColorFrameCount>-1.34))){
       fill(112,105,150);
     }
     rect(0,0,unit,unit);
@@ -431,7 +431,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
       fill(255,236,0,happyOpacity*255);
     }else if(angry>angryOffset){
       fill(253,16,35,angryOpacity*255);
-    }else if(sad>sadOffset&&(2.2>=sadColorFrameCount&&sadColorFrameCount>2.0)){
+    }else if(sad>sadOffset&&(-1.9>=sadColorFrameCount&&sadColorFrameCount>-2.10)){
       fill(112,105,150);
     }
     rect(0,0,unit,unit);
@@ -440,7 +440,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
       fill(143,235,150,happyOpacity*255);
     }else if(angry>angryOffset){
       fill(248,152,224,angryOpacity*255);
-    }else if(sad>sadOffset&&(2.2>=sadColorFrameCount&&sadColorFrameCount>2.0)){
+    }else if(sad>sadOffset&&(-1.9>=sadColorFrameCount&&sadColorFrameCount>-2.10)){
       fill(142,185,255);
     }
     arc(unit,unit/2,unit,unit,90,270);
@@ -458,7 +458,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
       fill(233,255,255,happyOpacity*255);
     }else if(angry>angryOffset){
       fill(200,50,100,angryOpacity*255);
-    }else if(sad>sadOffset&&(2.0>=sadColorFrameCount&&sadColorFrameCount>1.8)){
+    }else if(sad>sadOffset&&(2.1>=sadColorFrameCount&&sadColorFrameCount>1.9)){
       fill(11,57,72);
     }
     rect(0,0,unit,unit);
@@ -472,7 +472,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
       fill(0,221,75,happyOpacity*255);
     }else if(angry>angryOffset||surprised>surprisedOffset1){
       fill(255,150,100,angryOpacity*255);
-    }else if(sad>sadOffset&&(1.2>=sadColorFrameCount&&sadColorFrameCount>1.0)){
+    }else if(sad>sadOffset&&(1.38>=sadColorFrameCount&&sadColorFrameCount>1.21)){
       fill(11,57,72);
     }
     rect(0,0,unit,unit);
@@ -481,7 +481,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
       fill(255,236,0,happyOpacity*255);
     }else if(angry>angryOffset){
       fill(255,100,100,angryOpacity*255);
-    }else if(sad>sadOffset&&(1.2>=sadColorFrameCount&&sadColorFrameCount>1.0)){
+    }else if(sad>sadOffset&&(1.38>=sadColorFrameCount&&sadColorFrameCount>1.21)){
       fill(112,105,150);
     }
     ellipse(unit/2,unit/2,unit);
@@ -495,7 +495,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
       fill(143,235,150,happyOpacity*255);
     }else if(angry>angryOffset){
       fill(253,16,35,angryOpacity*255);
-    }else if(sad>sadOffset&&((0.4>=sadColorFrameCount&&sadColorFrameCount>0.2))){
+    }else if(sad>sadOffset&&((0.7>=sadColorFrameCount&&sadColorFrameCount>0.53))){
       fill(89,145,201);
     }
     rect(0,0,unit,unit);
@@ -509,7 +509,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
       fill(0,221,75,happyOpacity*255);
     }else if(angry>angryOffset||surprised>surprisedOffset1){
       fill(255,100,50,angryOpacity*255);
-    }else if(sad>sadOffset&&((-0.4>=sadColorFrameCount&&sadColorFrameCount>-0.6))){
+    }else if(sad>sadOffset&&((0.02>=sadColorFrameCount&&sadColorFrameCount>-0.15))){
       fill(11,57,72);
     }
     rect(0,0,unit,unit);
@@ -518,7 +518,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
       fill(233,255,255,happyOpacity*255);
     }else if(angry>angryOffset||surprised>surprisedOffset1){
       fill(200,50,100,angryOpacity*255);
-    }else if(sad>sadOffset&&((-0.4>=sadColorFrameCount&&sadColorFrameCount>-0.6))){
+    }else if(sad>sadOffset&&((0.02>=sadColorFrameCount&&sadColorFrameCount>-0.15))){
       fill(142,185,255);
     }
     arc(unit,unit,unit*2,unit*2,180,270);
@@ -532,7 +532,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
       fill(42,229,208,happyOpacity*255);
     }else if(angry>angryOffset){
       fill(253,16,35,angryOpacity*255);
-    }else if(sad>sadOffset&&((-1.2>=sadColorFrameCount&&sadColorFrameCount>-1.4))){
+    }else if(sad>sadOffset&&((-0.66>=sadColorFrameCount&&sadColorFrameCount>-0.83))){
       fill(142,185,255);
     }
     rect(0,0,unit,unit);
@@ -541,7 +541,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
       fill(255,236,0,happyOpacity*255);
     }else if(angry>angryOffset){
       fill(255,150,100,angryOpacity*255);
-    }else if(sad>sadOffset&&((-1.2>=sadColorFrameCount&&sadColorFrameCount>-1.4))){
+    }else if(sad>sadOffset&&((-0.66>=sadColorFrameCount&&sadColorFrameCount>-0.83))){
       fill(112,105,150);
     }
     arc(unit/2,unit,unit,unit,180,0);
@@ -555,7 +555,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
       fill(0,221,75,happyOpacity*255);
     }else if(angry>angryOffset){
       fill(248,152,224,angryOpacity*255);
-    }else if(sad>sadOffset&&((-2.0>=sadColorFrameCount&&sadColorFrameCount>-2.2))){
+    }else if(sad>sadOffset&&((-1.34>=sadColorFrameCount&&sadColorFrameCount>-1.51))){
       fill(142,185,255);
     }
     rect(0,0,unit,unit);
@@ -564,7 +564,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
       fill(255,86,102,happyOpacity*255);
     }else if(angry>angryOffset){
       fill(255,150,100,angryOpacity*255);
-    }else if(sad>sadOffset&&((-2.0>=sadColorFrameCount&&sadColorFrameCount>-2.2))){
+    }else if(sad>sadOffset&&((-1.34>=sadColorFrameCount&&sadColorFrameCount>-1.51))){
       fill(11,57,72);
     }
     arc(0,0,unit,unit,0,90);
@@ -581,7 +581,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
        fill(233,255,255,happyOpacity*255);
      }else if(angry>angryOffset){
        fill(200,50,100,angryOpacity*255);
-     }else if(sad>sadOffset&&(2.0>=sadColorFrameCount&&sadColorFrameCount>1.8)){
+     }else if(sad>sadOffset&&(-2.10>=sadColorFrameCount&&sadColorFrameCount>-2.30)){
        fill(11,57,72);
      }
      rect(0,0,unit,unit);
@@ -599,7 +599,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
       fill(255,86,102,happyOpacity*255);
     }else if(angry>angryOffset){
       fill(248,152,224,angryOpacity*255);
-    }else if(sad>sadOffset&&(1.8>=sadColorFrameCount&&sadColorFrameCount>1.6)){
+    }else if(sad>sadOffset&&(1.9>=sadColorFrameCount&&sadColorFrameCount>1.72)){
       fill(112,105,150);
     }
     rect(0,0,unit,unit);
@@ -608,7 +608,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
       fill(0,221,75,happyOpacity*255);
     }else if(angry>angryOffset){
       fill(253,16,35,angryOpacity*255);
-    }else if(sad>sadOffset&&(1.8>=sadColorFrameCount&&sadColorFrameCount>1.6)){
+    }else if(sad>sadOffset&&(1.9>=sadColorFrameCount&&sadColorFrameCount>1.72)){
       fill(89,145,201);
     }
     arc(0,unit/2,unit,unit,270,90);
@@ -622,7 +622,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
       fill(42,229,208,happyOpacity*255);
     }else if(angry>angryOffset){
       fill(255,100,50,angryOpacity*255);
-    }else if(sad>sadOffset&&(1.0>=sadColorFrameCount&&sadColorFrameCount>0.8)){
+    }else if(sad>sadOffset&&(1.21>=sadColorFrameCount&&sadColorFrameCount>1.04)){
       fill(89,145,201);
     }
     rect(0,0,unit,unit);
@@ -636,7 +636,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
       fill(255,236,0,happyOpacity*255);
     }else if(angry>angryOffset){
       fill(255,100,100,angryOpacity*255);
-    }else if(sad>sadOffset&&((0.2>=sadColorFrameCount&&sadColorFrameCount>0))){
+    }else if(sad>sadOffset&&((0.53>=sadColorFrameCount&&sadColorFrameCount>0.36))){
       fill(112,105,150);
     }
     rect(0,0,unit,unit);
@@ -645,7 +645,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
       fill(255,86,102,happyOpacity*255);
     }else if(angry>angryOffset){
       fill(248,152,224,angryOpacity*255);
-    }else if(sad>sadOffset&&((0.2>=sadColorFrameCount&&sadColorFrameCount>0))){
+    }else if(sad>sadOffset&&((0.53>=sadColorFrameCount&&sadColorFrameCount>0.36))){
       fill(142,185,255);
     }
     arc(unit/2,unit,unit,unit,180,0)
@@ -659,7 +659,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
       fill(143,235,150,happyOpacity*255);
     }else if(angry>angryOffset){
       fill(248,152,224,angryOpacity*255);
-    }else if(sad>sadOffset&&((-0.6>=sadColorFrameCount&&sadColorFrameCount>-0.8))){
+    }else if(sad>sadOffset&&((-0.15>=sadColorFrameCount&&sadColorFrameCount>-0.32))){
       fill(11,57,72);
     }
     rect(0,0,unit,unit);
@@ -669,7 +669,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
       fill(42,229,208,happyOpacity*255);
     }else if(angry>angryOffset){
       fill(255,100,50,angryOpacity*255);
-    }else if(sad>sadOffset&&((-0.6>=sadColorFrameCount&&sadColorFrameCount>-0.8))){
+    }else if(sad>sadOffset&&((-0.15>=sadColorFrameCount&&sadColorFrameCount>-0.32))){
       fill(112,105,150);
     }
     for(let i=0; i<unit; i+=10){
@@ -686,7 +686,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
       fill(0,221,75,happyOpacity*255);
     }else if(angry>angryOffset){
       fill(200,50,100,angryOpacity*255);
-    }else if(sad>sadOffset&&((-1.4>=sadColorFrameCount&&sadColorFrameCount>-1.6))){
+    }else if(sad>sadOffset&&((-0.83>=sadColorFrameCount&&sadColorFrameCount>-1.0))){
       fill(142,185,255);
     }
     rect(0,0,unit,unit);
@@ -695,7 +695,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
       fill(255,86,102,happyOpacity*255);
     }else if(angry>angryOffset){
       fill(255,100,50,angryOpacity*255);
-    }else if(sad>sadOffset&&((-1.4>=sadColorFrameCount&&sadColorFrameCount>-1.6))){
+    }else if(sad>sadOffset&&((-0.83>=sadColorFrameCount&&sadColorFrameCount>-1.0))){
       fill(89,145,201);
     }
     arc(unit/2,0,unit,unit,0,180);
@@ -709,7 +709,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
       fill(233,255,255,happyOpacity*255);
     }else if(angry>angryOffset){
       fill(248,152,224,angryOpacity*255);
-    }else if(sad>sadOffset&&((-2.2>=sadColorFrameCount&&sadColorFrameCount>=-2.4))){
+    }else if(sad>sadOffset&&((-1.51>=sadColorFrameCount&&sadColorFrameCount>=-1.70))){
       fill(142,185,255);
     }
     rect(0,0,unit,unit);
@@ -723,7 +723,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
       fill(255,86,102,happyOpacity*255);
     }else if(angry>angryOffset){
       fill(248,152,224,angryOpacity*255);
-    }else if(sad>sadOffset&&(1.8>=sadColorFrameCount&&sadColorFrameCount>1.6)){
+    }else if(sad>sadOffset&&(-2.30>=sadColorFrameCount&&sadColorFrameCount>=-2.4)){
       fill(112,105,150);
     }
     rect(0,0,unit,unit);
@@ -732,7 +732,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
       fill(0,221,75,happyOpacity*255);
     }else if(angry>angryOffset){
       fill(253,16,35,angryOpacity*255);
-    }else if(sad>sadOffset&&(1.8>=sadColorFrameCount&&sadColorFrameCount>1.6)){
+    }else if(sad>sadOffset&&(-2.30>=sadColorFrameCount&&sadColorFrameCount>-2.4)){
       fill(89,145,201);
     }
     arc(0,unit/2,unit,unit,270,90);
@@ -1114,7 +1114,7 @@ function basicbg(){
     push();
     noStroke();
     translate(unit*5,0);
-    fill(150,150,130);
+    fill(100,100,100);
     rect(0,0,unit,unit);
     pop();
     //2-7
