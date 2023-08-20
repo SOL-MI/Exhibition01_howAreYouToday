@@ -13,6 +13,7 @@ function setup() {
   video.size(windowWidth, windowHeight);
   video.hide(); //비디오 숨기기
 
+  frameRate(30);
   
   const faceOptions = {
     withLandmarks: true,
