@@ -108,15 +108,14 @@ function drawExpressions(detections, x, y, textYSpace){
     textSize(14);
     noStroke();
     fill(245,184,65);
-    text("neutral:      " + nf(neutral*100,0, 0)+"%", x+textYSpace*2, textYSpace*2);
-    text("happiness:  " + nf(happy*100,0, 0)+"%", x+textYSpace*2, textYSpace*3);
-    text("anger:       " + nf(angry*100,0, 0)+"%", x+textYSpace*2, textYSpace*4);
-    text("sad:          "+ nf(sad*100,0, 0)+"%", x+textYSpace*2, textYSpace*5);
-    text("surprised:   " + nf(surprised*100,0, 0)+"%",  x+textYSpace*2, textYSpace*6);
+    text("neutral:      " + nf(neutral*100,0, 0)+"%", x+textYSpace*2, textYSpace*3);
+    text("happiness:  " + nf(happy*100,0, 0)+"%", x+textYSpace*2, textYSpace*4);
+    text("anger:       " + nf(angry*100,0, 0)+"%", x+textYSpace*2, textYSpace*5);
+    text("sad:          "+ nf(sad*100,0, 0)+"%", x+textYSpace*2, textYSpace*6);
+    text("surprised:   " + nf(surprised*100,0, 0)+"%",  x+textYSpace*2, textYSpace*7);
     pop();
   }else{
-
-    noInteractionDisplay();
+    basicbg();
 
     push();
     textSize(14);
@@ -129,235 +128,6 @@ function drawExpressions(detections, x, y, textYSpace){
     text("surprised:   "+"0.%",  x+textYSpace*2, textYSpace*7);
     pop();
   }
-}
-function noInteractionDisplay(){
-      //1번째 줄
-      const unit = windowWidth/7;
-      //1-1
-      push();
-      noStroke();
-      fill(30,30,30);
-      rect(0,0,unit,unit);
-      fill(100,100,100);
-      arc(unit/2,unit,unit,unit,180,0);
-      pop();
-      //1-2
-      push();
-      noStroke();
-      translate(unit,0);
-      fill(200,200,200);
-      rect(0,0,unit,unit);
-      pop();
-      //1-3
-      push();
-      noStroke();
-      translate(unit*2,0);
-      fill(100,100,100);
-      rect(0,0,unit,unit);
-      fill(150,150,130);
-      arc(0,unit,unit*2,unit*2,270,0);
-      pop();
-      //1-4
-      push();
-      noStroke();
-      translate(unit*3,0);
-      fill(150,150,150);
-      rect(0,0,unit,unit);
-      fill(30,30,30);
-      arc(unit,unit/2,unit,unit,90,270);
-      pop();
-      //1-5
-      push();
-      noStroke();
-      translate(unit*4,0);
-      fill(100,100,100);
-      rect(0,0,unit,unit);
-      pop();
-      //1-6
-      push();
-      noStroke();
-      translate(unit*5,0);
-      fill(200,200,200);
-      rect(0,0,unit,unit);
-      fill(150,150,130);
-      arc(unit,0,unit*2,unit*2,90,180);
-      pop();
-  
-  
-      //2번째줄
-      push();
-      translate(0,unit);
-        //2-1
-        push();
-        noStroke();
-        fill(150,150,130);
-        rect(0,0,unit,unit);
-        fill(50,50,50);
-        arc(unit,unit/2,unit,unit,90,270);
-        pop();
-        //2-2
-        push();
-        noStroke();
-        translate(unit,0);
-        fill(100,100,100);
-        rect(0,0,unit,unit);
-          push();
-          fill(150,150,150);
-          for(let i=0; i<unit; i+=10){
-            rect(i,0,2,unit-i)
-          }
-          pop();
-        pop();
-        //2-3
-        push();
-        noStroke();
-        translate(unit*2,0);
-        fill(50,50,50);
-        rect(0,0,unit,unit);
-        fill(150,150,150);
-        arc(unit,unit/2,unit,unit,90,270);
-        pop();
-        //2-4
-        push();
-        noStroke();
-        translate(unit*3,0);
-        fill(150,150,130);
-        rect(0,0,unit,unit);
-        fill(50,50,50);
-        arc(0,unit/2,unit,unit,270,90);
-        pop();
-        //2-5
-        push();
-        noStroke();
-        translate(unit*4,0);
-        fill(30,30,30);
-        rect(0,0,unit,unit);
-        fill(100,100,100);
-        arc(unit/2,unit,unit,unit,180,0)
-        pop();
-        //2-6
-        push();
-        noStroke();
-        translate(unit*5,0);
-        fill(150,150,130);
-        rect(0,0,unit,unit);
-        pop();
-      pop();
-  
-      //3번째 줄
-      push();
-      translate(0,unit*2);
-        //3-1
-        push();
-        noStroke();
-        fill(100,100,100);
-        rect(0,0,unit,unit);
-        pop();
-        //3-2
-        push();
-        noStroke();
-        translate(unit,0);
-        fill(50,50,50);
-        rect(0,0,unit,unit);
-        fill(200,200,200);
-        ellipse(unit/2,unit/2,unit);
-        pop();
-        //3-3
-        push();
-        noStroke();
-        translate(unit*2,0);
-        fill(100,100,100);
-        rect(0,0,unit,unit);
-        pop();
-        //3-4
-        push();
-        noStroke();
-        translate(unit*3,0);
-        fill(200,200,200);
-        rect(0,0,unit,unit);
-        fill(70,70,70);
-        arc(unit,unit,unit*2,unit*2,180,270);
-        pop();
-        //3-5
-        push();
-        noStroke();
-        translate(unit*4,0);
-        fill(200,200,200);
-        rect(0,0,unit,unit);
-        fill(150,150,130);
-        arc(unit/2,unit,unit,unit,180,0);
-        pop();
-        //3-6
-        push();
-        noStroke();
-        translate(unit*5,0);
-        fill(100,100,100);
-        rect(0,0,unit,unit);
-        fill(30,30,30);
-        arc(0,0,unit,unit,0,90);
-        arc(0,unit,unit,unit,270,0);
-        arc(unit,0,unit,unit,90,180);
-        arc(unit,unit,unit,unit,180,270);
-        pop();
-      pop();
-  
-      //4번째줄
-      push();
-      translate(0,unit*3);
-        //4-1
-        push();
-        noStroke();
-        fill(30,30,30);
-        rect(0,0,unit,unit);
-        fill(150,150,130);
-        arc(0,unit/2,unit,unit,270,90);
-        pop();
-        //4-2
-        push();
-        noStroke();
-        translate(unit,0);
-        fill(150,150,150);
-        rect(0,0,unit,unit);
-        pop();
-        //4-3
-        push();
-        noStroke();
-        translate(unit*2,0);
-        fill(200,200,200);
-        rect(0,0,unit,unit);
-        fill(150,150,130);
-        arc(unit/2,unit,unit,unit,180,0)
-        pop();
-        //4-4
-        push();
-        noStroke();
-        translate(unit*3,0);
-        fill(30,30,30);
-        rect(0,0,unit,unit);
-        push();
-        fill(150,150,150);
-        for(let i=0; i<unit; i+=10){
-          rect(i,0,2,i)
-        }
-        pop();
-        pop();
-        //4-5
-        push();
-        noStroke();
-        translate(unit*4,0);
-        fill(150,150,150);
-        rect(0,0,unit,unit);
-        fill(50,50,50);
-        arc(unit/2,0,unit,unit,0,180);
-        pop();
-        //4-6
-        push();
-        noStroke();
-        translate(unit*5,0);
-        fill(100,100,100);
-        rect(0,0,unit,unit);
-        pop();
-      pop();
 }
 
 function InteractionDisplay(neutral, happy, angry, sad, surprised){
@@ -492,6 +262,28 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
     fill(142,185,255);
   }
   arc(unit,0,unit*2,unit*2,90,180);
+  pop();
+  //1-7
+  push();
+  noStroke();
+  translate(unit*6,0);
+  if(happy>happyOffset){
+    fill(233,255,255,happyOpacity*255);
+  }else if(angry>angryOffset){
+    fill(255,100,50,angryOpacity*255);
+  }else if(sad>sadOffset&&(2.4>=sadColorFrameCount&&sadColorFrameCount>2.2)){
+    fill(11,57,72);
+  }
+  rect(0,0,unit,unit);
+
+  if(happy>happyOffset){
+    fill(0,221,75,happyOpacity*255);
+  }else if(angry>angryOffset){
+    fill(200,50,100,angryOpacity*255);
+  }else if(sad>sadOffset&&(2.4>=sadColorFrameCount&&sadColorFrameCount>2.2)){
+    fill(89,145,201);
+  }
+  arc(unit/2,unit,unit,unit,180,0);
   pop();
 
 
@@ -630,6 +422,29 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
     }
     rect(0,0,unit,unit);
     pop();
+    //2-7
+    push();
+    noStroke();
+    translate(unit*6,0);
+    // fill(150,150,130);
+    if(happy>happyOffset||surprised>surprisedOffset1){
+      fill(255,236,0,happyOpacity*255);
+    }else if(angry>angryOffset){
+      fill(253,16,35,angryOpacity*255);
+    }else if(sad>sadOffset&&(2.2>=sadColorFrameCount&&sadColorFrameCount>2.0)){
+      fill(112,105,150);
+    }
+    rect(0,0,unit,unit);
+    // fill(50,50,50);
+    if(happy>happyOffset||surprised>surprisedOffset1){
+      fill(143,235,150,happyOpacity*255);
+    }else if(angry>angryOffset){
+      fill(248,152,224,angryOpacity*255);
+    }else if(sad>sadOffset&&(2.2>=sadColorFrameCount&&sadColorFrameCount>2.0)){
+      fill(142,185,255);
+    }
+    arc(unit,unit/2,unit,unit,90,270);
+    pop();
   pop();
 
   //3번째 줄
@@ -737,7 +552,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
     translate(unit*5,0);
     // fill(100,100,100);
     if(happy>happyOffset||surprised>surprisedOffset1){
-      fill(255,236,0,happyOpacity*255);
+      fill(0,221,75,happyOpacity*255);
     }else if(angry>angryOffset){
       fill(248,152,224,angryOpacity*255);
     }else if(sad>sadOffset&&((-2.0>=sadColorFrameCount&&sadColorFrameCount>-2.2))){
@@ -745,7 +560,7 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
     }
     rect(0,0,unit,unit);
     // fill(30,30,30);
-    if(happy>happyOffset){
+    if(happy>happyOffset||surprised>surprisedOffset1){
       fill(255,86,102,happyOpacity*255);
     }else if(angry>angryOffset){
       fill(255,150,100,angryOpacity*255);
@@ -757,6 +572,20 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
     arc(unit,0,unit,unit,90,180);
     arc(unit,unit,unit,unit,180,270);
     pop();
+     //3-7
+     push();
+     noStroke();
+     translate(unit*6,0);
+     // fill(100,100,100);
+     if(happy>happyOffset){
+       fill(233,255,255,happyOpacity*255);
+     }else if(angry>angryOffset){
+       fill(200,50,100,angryOpacity*255);
+     }else if(sad>sadOffset&&(2.0>=sadColorFrameCount&&sadColorFrameCount>1.8)){
+       fill(11,57,72);
+     }
+     rect(0,0,unit,unit);
+     pop();
   pop();
 
   //4번째줄
@@ -884,6 +713,29 @@ function InteractionDisplay(neutral, happy, angry, sad, surprised){
       fill(142,185,255);
     }
     rect(0,0,unit,unit);
+    pop();
+    //4-7
+    push();
+    noStroke();
+    translate(unit*6,0);
+    // fill(30,30,30);
+    if(happy>happyOffset){
+      fill(255,86,102,happyOpacity*255);
+    }else if(angry>angryOffset){
+      fill(248,152,224,angryOpacity*255);
+    }else if(sad>sadOffset&&(1.8>=sadColorFrameCount&&sadColorFrameCount>1.6)){
+      fill(112,105,150);
+    }
+    rect(0,0,unit,unit);
+    // fill(150,150,130);
+    if(happy>happyOffset||surprised>surprisedOffset1){
+      fill(0,221,75,happyOpacity*255);
+    }else if(angry>angryOffset){
+      fill(253,16,35,angryOpacity*255);
+    }else if(sad>sadOffset&&(1.8>=sadColorFrameCount&&sadColorFrameCount>1.6)){
+      fill(89,145,201);
+    }
+    arc(0,unit/2,unit,unit,270,90);
     pop();
   pop();
 }
@@ -1197,6 +1049,15 @@ function basicbg(){
   fill(150,150,130);
   arc(unit,0,unit*2,unit*2,90,180);
   pop();
+  //1-7
+  push();
+  noStroke();
+  translate(unit*6,0);
+  fill(0,0,0);
+  rect(0,0,unit,unit);
+  fill(100,100,100);
+  arc(unit/2,unit,unit,unit,180,0);
+  pop();
 
   //2번째줄
   push();
@@ -1256,6 +1117,15 @@ function basicbg(){
     fill(150,150,130);
     rect(0,0,unit,unit);
     pop();
+    //2-7
+    push();
+    noStroke();
+    translate(unit*6,0);
+    fill(150,150,130);
+    rect(0,0,unit,unit);
+    fill(50,50,50);
+    arc(unit,unit/2,unit,unit,90,270);
+    pop();
   pop();
 
   //3번째 줄
@@ -1312,6 +1182,13 @@ function basicbg(){
     arc(0,unit,unit,unit,270,0);
     arc(unit,0,unit,unit,90,180);
     arc(unit,unit,unit,unit,180,270);
+    pop();
+    //3-7
+    push();
+    noStroke();
+    translate(unit*6,0);
+    fill(100,100,100);
+    rect(0,0,unit,unit);
     pop();
   pop();
 
@@ -1371,6 +1248,15 @@ function basicbg(){
     fill(100,100,100);
     rect(0,0,unit,unit);
     pop();
+    //4-7
+    push();
+    noStroke();
+    translate(unit*6,0);
+    fill(30,30,30);
+    rect(0,0,unit,unit);
+    fill(150,150,130);
+    arc(0,unit/2,unit,unit,270,90);
+    pop();
   pop();
 }
 
@@ -1424,6 +1310,15 @@ function sadColorBg (sad) {
   rect(0,0,unit,unit);
   fill(129,54, 205)
   arc(unit,0,unit*2,unit*2,90,180);
+  pop();
+  //1-7
+  push();
+  noStroke();
+  translate(unit*6,0);
+  fill(108,5,221);
+  rect(0,0,unit,unit);
+  fill(159,111,255);
+  arc(unit/2,unit,unit,unit,180,0);
   pop();
 
   //2번째줄
@@ -1484,6 +1379,15 @@ function sadColorBg (sad) {
     fill(108,5,221);
     rect(0,0,unit,unit);
     pop();
+    //2-7
+    push();
+    noStroke();
+    translate(unit*6,0);
+    fill(167,91,205);
+    rect(0,0,unit,unit);
+    fill(129,54, 205);
+    arc(unit,unit/2,unit,unit,90,270);
+    pop();
   pop();
 
   //3번째 줄
@@ -1540,6 +1444,13 @@ function sadColorBg (sad) {
     arc(0,unit,unit,unit,270,0);
     arc(unit,0,unit,unit,90,180);
     arc(unit,unit,unit,unit,180,270);
+    pop();
+    //3-7
+    push();
+    noStroke();
+    translate(unit*6,0);
+    fill(159,111,255);
+    rect(0,0,unit,unit);
     pop();
   pop();
 
@@ -1599,5 +1510,14 @@ function sadColorBg (sad) {
     fill(159,111,255);
     rect(0,0,unit,unit);
     pop();
+    //4-7
+     push();
+     noStroke();
+     translate(unit*6,0);
+     fill(108,5,221);
+     rect(0,0,unit,unit);
+     fill(167,91,205);
+     arc(0,unit/2,unit,unit,270,90);
+     pop();
   pop();
 }
